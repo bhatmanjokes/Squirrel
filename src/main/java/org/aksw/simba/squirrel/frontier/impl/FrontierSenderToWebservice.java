@@ -120,7 +120,7 @@ public class FrontierSenderToWebservice implements Runnable, Closeable {
                         // if something changed in general, then probably the crawled graph, too
                         VisualisationGraph graph = generateVisualisationGraph();
                         webQueue.basicPublish("", WEB_QUEUE_GRAPH_NAME, null, graph.convertToByteStream());
-                        LOGGER.info("Putted a new crawled graph into the queue " + WEB_QUEUE_GRAPH_NAME + " with " + graph.getNodes().length + " nodes and " + graph.getEdges().length + " edges!");
+//                        LOGGER.info("Putted a new crawled graph into the queue " + WEB_QUEUE_GRAPH_NAME + " with " + graph.getNodes().length + " nodes and " + graph.getEdges().length + " edges!");
                     }
                 }
                 Thread.sleep(100);

@@ -185,7 +185,7 @@ public class RDBKnownUriFilter implements KnownUriFilter, Closeable {
     @Override
     public void add(CrawleableUri uri, List<CrawleableUri> urisFound, long lastCrawlTimestamp, long nextCrawlTimestamp) {
         try {
-            if(r.db(DATABASE_NAME).table(TABLE_NAME).filter(doc -> doc.getField(COLUMN_URI).eq(uri.getUri().toString())).isEmpty().run(connector.connection)) {
+            if(r.db(DATABASE_NAME).table(TABLE_NAME).filter(doc -> doc.getField(COLUMN_URI).eq(uri.getUri().toString())).isEmpty().run(connector.connection) != null) {
                 r.db(DATABASE_NAME)
                     .table(TABLE_NAME)
                     .insert(convertURITimestampToRDB(uri, urisFound, lastCrawlTimestamp, nextCrawlTimestamp, false))

@@ -67,7 +67,7 @@ services:
       - HOBBIT_RABBIT_HOST=rabbit
       - OUTPUT_FOLDER=/var/squirrel/data
       - HTML_SCRAPER_YAML_PATH=/var/squirrel/yaml
-      - CONTEXT_CONFIG_FILE=/var/squirrel/spring-config/context-sparqlStoreBased.xml
+      - CONTEXT_CONFIG_FILE=/var/squirrel/spring-config/context-fileBased.xml
       - SPARQL_HOST_NAME=sparqlHost
       - SPARQL_HOST_PORT=3030
     volumes:
@@ -83,7 +83,7 @@ services:
       - HOBBIT_RABBIT_HOST=rabbit
       - OUTPUT_FOLDER=/var/squirrel/data
       - HTML_SCRAPER_YAML_PATH=/var/squirrel/yaml
-      - CONTEXT_CONFIG_FILE=/var/squirrel/spring-config/context-sparqlStoreBased.xml
+      - CONTEXT_CONFIG_FILE=/var/squirrel/spring-config/context-fileBased.xml
       - SPARQL_HOST_NAME=sparqlHost
       - SPARQL_HOST_PORT=3030
     volumes:
@@ -99,7 +99,7 @@ services:
       - HOBBIT_RABBIT_HOST=rabbit
       - OUTPUT_FOLDER=/var/squirrel/data
       - HTML_SCRAPER_YAML_PATH=/var/squirrel/yaml
-      - CONTEXT_CONFIG_FILE=/var/squirrel/spring-config/context-sparqlStoreBased.xml
+      - CONTEXT_CONFIG_FILE=/var/squirrel/spring-config/context-fileBased.xml
       - SPARQL_HOST_NAME=sparqlHost
       - SPARQL_HOST_PORT=3030
     volumes:

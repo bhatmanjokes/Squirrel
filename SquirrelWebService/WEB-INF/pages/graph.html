@@ -19,6 +19,7 @@
   </style>
   <script src="/pages/js/sigma.min.js"></script>
   <script src="/pages/js/sigma.parsers.json.min.js"></script>
+   
   <script>
     /*$.ajax({
       url: "/observer/crawledGraph",
@@ -34,6 +35,9 @@
     }).fail(function () {
       alert("AJAX request to \"" + uri + "\" failed :( Please reload the page to see the graph (maybe)...");
     }); */
+    
+
+    
     sigma.parsers.json("/observer/crawledGraph", {
       container: "graphContainer",
       settings: {
@@ -49,6 +53,7 @@
       }
     });
   </script>
+   
 </head>
 
 <body bgcolor="#d3d3d3">
@@ -69,7 +74,7 @@
     <td width="50%">
       <h1>Crawled Graph</h1>
       <p>Here you can see the graph of the crawled URIs. In the left you can find the most earliest crawled node in the data snip.</p>
-      <div id="graphContainer"></div>
+      <div id="graphContainer" style="width: 900px; height: 700px; background-color: white;" ></div>
     </td>
   </tr>
 </table>
